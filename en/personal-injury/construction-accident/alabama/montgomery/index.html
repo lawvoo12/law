@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Construction Accident Lawyer in Montgomery, Alabama — Free Consultation | Lawvoo</title>
+<title>Construction Accident Lawyer in Montgomery, Alabama | Lawvoo</title>
 <meta name="description" content="Find the best construction accident lawyer in Montgomery, Alabama. Local attorneys familiar with Montgomery County. Free consultation 24/7. No win no fee."/>
 <meta name="keywords" content="construction accident lawyer montgomery, construction accident lawyer montgomery alabama, construction accident attorney montgomery"/>
 <meta name="robots" content="index, follow"/>
@@ -51,7 +51,7 @@
 <script>
 var CITY_NAME = "Montgomery";
 fetch("../../../../../data/lawyer.json").then(function(r){return r.json();}).then(function(data){
-  var l = data.filter(function(x){return x.category === "Personal Injury";});
+  var l = data.filter(function(x){return x.category === "Personal Injury" && x.city === CITY_NAME && x.state === "Alabama";});
   document.getElementById("lawyerGrid").innerHTML = l.length ? "" : "<p style=\"grid-column:1/-1;color:#5a6a7e;font-size:0.9rem;\">Verified attorneys serving " + CITY_NAME + " are being added. Call now and we will connect you with a licensed attorney.</p>";
 }).catch(function(){
   document.getElementById("lawyerGrid").innerHTML = "<p style=\"grid-column:1/-1;color:#5a6a7e;font-size:0.9rem;\">Call now and we will connect you with a licensed attorney serving " + CITY_NAME + ".</p>";
