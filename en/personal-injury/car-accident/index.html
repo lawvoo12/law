@@ -213,7 +213,7 @@
   <p class="sec-sub">Select your state to find experienced car accident and auto accident attorneys near you.</p>
   <div class="states-grid">
     <a href="/en/personal-injury/car-accident/alabama/" class="scard"><span class="scard-name">Alabama</span><i class="fa-solid fa-chevron-right"></i></a>
-    <a href="/en/personal-injury/car-accident/alaska/" class="scard"><span class="scard-name">Alaska</span><i class="fa-solid fa-chevron-right"></i></a>
+    
     <a href="/en/personal-injury/car-accident/arizona/" class="scard"><span class="scard-name">Arizona</span><i class="fa-solid fa-chevron-right"></i></a>
     <a href="/en/personal-injury/car-accident/arkansas/" class="scard"><span class="scard-name">Arkansas</span><i class="fa-solid fa-chevron-right"></i></a>
     <a href="/en/personal-injury/car-accident/california/" class="scard"><span class="scard-name">California</span><i class="fa-solid fa-chevron-right"></i></a>
@@ -221,10 +221,10 @@
     <a href="/en/personal-injury/car-accident/florida/" class="scard"><span class="scard-name">Florida</span><i class="fa-solid fa-chevron-right"></i></a>
     <a href="/en/personal-injury/car-accident/georgia/" class="scard"><span class="scard-name">Georgia</span><i class="fa-solid fa-chevron-right"></i></a>
     <a href="/en/personal-injury/car-accident/illinois/" class="scard"><span class="scard-name">Illinois</span><i class="fa-solid fa-chevron-right"></i></a>
-    <a href="/en/personal-injury/car-accident/indiana/" class="scard"><span class="scard-name">Indiana</span><i class="fa-solid fa-chevron-right"></i></a>
-    <a href="/en/personal-injury/car-accident/kentucky/" class="scard"><span class="scard-name">Kentucky</span><i class="fa-solid fa-chevron-right"></i></a>
+    
+    
     <a href="/en/personal-injury/car-accident/louisiana/" class="scard"><span class="scard-name">Louisiana</span><i class="fa-solid fa-chevron-right"></i></a>
-    <a href="/en/personal-injury/car-accident/michigan/" class="scard"><span class="scard-name">Michigan</span><i class="fa-solid fa-chevron-right"></i></a>
+    
     <a href="/en/personal-injury/car-accident/mississippi/" class="scard"><span class="scard-name">Mississippi</span><i class="fa-solid fa-chevron-right"></i></a>
     <a href="/en/personal-injury/car-accident/missouri/" class="scard"><span class="scard-name">Missouri</span><i class="fa-solid fa-chevron-right"></i></a>
     <a href="/en/personal-injury/car-accident/new-york/" class="scard"><span class="scard-name">New York</span><i class="fa-solid fa-chevron-right"></i></a>
@@ -356,7 +356,7 @@
     </ul></div>
     <div class="fcol"><h4>Company</h4><ul>
       <li><a href="/en/about.html"><i class="fa-solid fa-chevron-right"></i> About</a></li>
-      <li><a href="/en/privacy-policy.html"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
+      <li><a href="/en/privacy.html"><i class="fa-solid fa-chevron-right"></i> Privacy Policy</a></li>
       <li><a href="/en/disclaimer.html"><i class="fa-solid fa-chevron-right"></i> Disclaimer</a></li>
       <li><a href="/es/"><i class="fa-solid fa-chevron-right"></i> Español</a></li>
     </ul></div>
@@ -368,7 +368,7 @@
 
 <script>
 function toggleFaq(el){el.parentElement.classList.toggle("open");}
-fetch("../../../data/lawyers.json").then(r=>r.json()).then(data=>{
+fetch("../../../data/lawyer.json").then(r=>r.json()).then(data=>{
   const l=data.filter(x=>x.category==="Personal Injury");
   document.getElementById("lawyerGrid").innerHTML=l.map(l=>`<div class="lcard"><div class="lcard-top"><img src="${l.image}" alt="${l.name}" class="lcard-img"/><div style="flex:1"><div class="lcard-name">${l.name}</div><div class="lcard-firm">${l.firm}</div><div class="lcard-loc"><i class="fa-solid fa-location-dot"></i> ${l.city}, ${l.state}</div></div>${l.free_consultation?"<span class=\"free-badge\">Free Consult</span>":""}</div><div class="lcard-stars"><span class="stars-val">${"★".repeat(Math.floor(l.rating))}${"☆".repeat(5-Math.floor(l.rating))}</span><span class="stars-num">${l.rating}</span><span class="stars-count">(${l.reviews} reviews)</span></div><div class="lcard-tags"><span class="ltag">${l.subcategory||l.category}</span><span class="ltag">${l.experience} yrs exp</span>${l.languages.includes("Spanish")?"<span class=\"ltag ltag-es\">Habla Español</span>":""}</div><a href="tel:18005295866" class="lcall-btn"><i class="fa-solid fa-phone"></i> Free Consultation — Call Now</a></div>`).join("");
 });

@@ -205,7 +205,7 @@
     </ul></div>
     <div class="fcol"><h4>Empresa</h4><ul>
       <li><a href="/es/about.html"><i class="fa-solid fa-chevron-right"></i> Acerca de</a></li>
-      <li><a href="/es/privacy-policy.html"><i class="fa-solid fa-chevron-right"></i> Privacidad</a></li>
+      <li><a href="/es/privacy.html"><i class="fa-solid fa-chevron-right"></i> Privacidad</a></li>
       <li><a href="/es/disclaimer.html"><i class="fa-solid fa-chevron-right"></i> Aviso Legal</a></li>
       <li><a href="/en/"><i class="fa-solid fa-chevron-right"></i> English</a></li>
     </ul></div>
@@ -216,7 +216,7 @@
 <div class="float-call"><a href="tel:18005295866" class="float-btn"><i class="fa-solid fa-phone"></i><div class="float-dot"></div></a></div>
 
 <script>
-fetch("../../../data/lawyers.json").then(r=>r.json()).then(data=>{
+fetch("../../../data/lawyer.json").then(r=>r.json()).then(data=>{
   const l=data.filter(x=>x.category==="Personal Injury");
   document.getElementById("lawyerGrid").innerHTML=l.map(l=>`<div class="lcard"><div class="lcard-top"><img src="${l.image}" alt="${l.name}" class="lcard-img"/><div style="flex:1"><div class="lcard-name">${l.name}</div><div class="lcard-firm">${l.firm}</div><div class="lcard-loc"><i class="fa-solid fa-location-dot"></i> ${l.city}, ${l.state}</div></div>${l.free_consultation?'<span class="free-badge">Consulta Gratis</span>':''} </div><div class="lcard-stars"><span class="stars-val">${"★".repeat(Math.floor(l.rating))}${"☆".repeat(5-Math.floor(l.rating))}</span><span class="stars-num">${l.rating}</span><span class="stars-count">(${l.reviews} reseñas)</span></div><div class="lcard-tags"><span class="ltag">${l.subcategory||l.category}</span><span class="ltag">${l.experience} años exp</span>${l.languages.includes("Spanish")?'<span class="ltag ltag-es">Habla Español</span>':''} </div><a href="tel:18005295866" class="lcall-btn"><i class="fa-solid fa-phone"></i> Consulta Gratis — Llamar Ahora</a></div>`).join("");
 });

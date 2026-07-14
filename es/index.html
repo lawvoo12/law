@@ -409,7 +409,7 @@
       <h4>Empresa</h4>
       <ul>
         <li><a href="/es/about.html"><i class="fa-solid fa-chevron-right"></i> Acerca de</a></li>
-        <li><a href="/es/privacy-policy.html"><i class="fa-solid fa-chevron-right"></i> Privacidad</a></li>
+        <li><a href="/es/privacy.html"><i class="fa-solid fa-chevron-right"></i> Privacidad</a></li>
         <li><a href="/es/disclaimer.html"><i class="fa-solid fa-chevron-right"></i> Aviso Legal</a></li>
         <li><a href="/en/"><i class="fa-solid fa-chevron-right"></i> English</a></li>
       </ul>
@@ -436,7 +436,7 @@ function doSearch(){
   window.location.href = `/es/personal-injury/${cat}/alabama/`;
 }
 
-fetch('../data/lawyers.json').then(r=>r.json()).then(data=>{
+fetch('../data/lawyer.json').then(r=>r.json()).then(data=>{
   const pi = data.filter(l => l.category === 'Personal Injury');
   document.getElementById('lawyerGrid').innerHTML = pi.map(l=>`
     <div class="lcard">
