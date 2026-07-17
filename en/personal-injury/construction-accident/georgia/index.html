@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Construction Accident Lawyer in Georgia — Free Consultation | Lawvoo</title>
+  <title>Construction Accident Lawyer in Georgia | Lawvoo</title>
   <meta name="description" content="Find the best construction accident lawyer in Georgia. Georgia attorneys fight for maximum compensation. Free consultation 24/7. No win no fee."/>
   <meta name="keywords" content="construction accident lawyer, job site injury attorney, construction accident lawyer georgia, construction accident attorney georgia"/>
   <meta name="robots" content="index, follow"/>
@@ -29,7 +29,7 @@
     footer{background:#060f1e;color:rgba(255,255,255,0.3);padding:3.5rem 2rem 2rem;}.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem;}.footer-logo{font-family:"Playfair Display",serif;font-size:1.4rem;font-weight:900;color:#fff;margin-bottom:0.7rem;}.footer-logo em{color:var(--gold);font-style:normal;}.footer-desc{font-size:0.82rem;line-height:1.7;font-weight:300;}.fcol h4{color:rgba(255,255,255,0.65);font-size:0.77rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:1rem;}.fcol ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem;}.fcol ul li a{color:rgba(255,255,255,0.3);font-size:0.83rem;text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:0.4rem;}.fcol ul li a:hover{color:var(--gold);}.footer-bottom{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,0.05);padding-top:1.4rem;font-size:0.77rem;text-align:center;}
     .float-call{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;}.float-btn{width:58px;height:58px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 8px 24px rgba(200,146,46,0.42);transition:all .2s;position:relative;}.float-btn i{font-size:1.25rem;color:var(--navy);}.float-btn:hover{transform:scale(1.1);}.float-dot{position:absolute;top:1px;right:1px;width:14px;height:14px;background:#22c55e;border-radius:50%;border:2px solid #060f1e;}
     @media(max-width:900px){.nav-links{display:none;}}@media(max-width:768px){.content-inner{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr 1fr;}.stats-inner{grid-template-columns:repeat(2,1fr);}.hero{padding:3.5rem 1.5rem 3rem;}}@media(max-width:480px){.footer-grid{grid-template-columns:1fr;}.section{padding:3rem 1.5rem;}}
-  </style>
+  .lawyers-section{padding:4.5rem 2rem;}.lawyers-inner{max-width:1100px;margin:0 auto;}.lawyers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.1rem;}.lcard{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.4rem;}.lcard-top{display:flex;gap:1rem;margin-bottom:0.9rem;}.lcard-img{width:52px;height:52px;border-radius:50%;object-fit:cover;}.lcard-name{font-size:0.98rem;font-weight:700;color:var(--text);}.lcard-firm{font-size:0.83rem;color:var(--muted);}.lcard-loc{font-size:0.78rem;color:var(--gold);font-weight:600;margin-top:0.2rem;}.lcall-btn{display:flex;align-items:center;justify-content:center;gap:0.5rem;width:100%;background:var(--navy);color:#fff;font-size:0.88rem;font-weight:700;padding:0.8rem;border-radius:10px;text-decoration:none;}</style>
 </head>
 <body>
 <nav class="nav">
@@ -114,6 +114,14 @@
     </div>
   </div>
 </section>
+<section class="lawyers-section">
+  <div class="lawyers-inner">
+    <p class="sec-tag"><i class="fa-solid fa-user-tie"></i> Verified Attorneys</p>
+    <h2 class="sec-title">Featured Lawyers in Georgia</h2>
+    <p class="sec-sub">Free consultation — connect with a verified attorney in Georgia.</p>
+    <div class="lawyers-grid" id="lawyerGrid"></div>
+  </div>
+</section>
 <section class="faq-section">
   <div class="faq-inner">
     <p class="sec-tag"><i class="fa-solid fa-circle-question"></i> FAQ</p>
@@ -151,5 +159,13 @@
   <div class="footer-bottom"><p>© 2025 Lawvoo.com — All Rights Reserved. Lawvoo is not a law firm.</p></div>
 </footer>
 <div class="float-call"><a href="tel:18005295866" class="float-btn"><i class="fa-solid fa-phone"></i><div class="float-dot"></div></a></div>
+<script>
+fetch("../../../../data/lawyer.json").then(function(r){return r.json();}).then(function(data){
+  var l = data.filter(function(x){return x.category === "Personal Injury" && x.state === "Georgia";});
+  document.getElementById("lawyerGrid").innerHTML = l.length ? l.map(function(x){return '<div class="lcard"><div class="lcard-top"><img src="'+x.image+'" alt="'+x.name+'" class="lcard-img"/><div style="flex:1"><div class="lcard-name">'+x.name+'</div><div class="lcard-firm">'+x.firm+'</div><div class="lcard-loc"><i class="fa-solid fa-location-dot"></i> '+x.city+', '+x.state+'</div></div></div><a href="tel:18005295866" class="lcall-btn"><i class="fa-solid fa-phone"></i> Free Consultation — Call Now</a></div>';}).join("") : '<p style="grid-column:1/-1;color:#5a6a7e;font-size:0.9rem;">Verified attorneys serving Georgia are being added. Call now and we will connect you with a licensed attorney.</p>';
+}).catch(function(){
+  document.getElementById("lawyerGrid").innerHTML = '<p style="grid-column:1/-1;color:#5a6a7e;font-size:0.9rem;">Call now and we will connect you with a licensed attorney serving Georgia.</p>';
+});
+</script>
 </body>
 </html>
