@@ -217,7 +217,14 @@
 <script>
 fetch("../../../data/lawyer.json").then(r=>r.json()).then(data=>{
   const l=data.filter(x=>x.category==="Personal Injury");
-  document.getElementById("lawyerGrid").innerHTML=l.map(l=>`<div class="lcard"><div class="lcard-top"><img src="${l.image}" alt="${l.name}" class="lcard-img"/><div style="flex:1"><div class="lcard-name">${l.name}</div><div class="lcard-firm">${l.firm}</div><div class="lcard-loc"><i class="fa-solid fa-location-dot"></i> ${l.city}, ${l.state}</div></div>${l.free_consultation?'<span class="free-badge">Consulta Gratis</span>':''} </div><div class="lcard-stars"><span class="stars-val">${"★".repeat(Math.floor(l.rating))}${"☆".repeat(5-Math.floor(l.rating))}</span><span class="stars-num">${l.rating}</span><span class="stars-count">(${l.reviews} reseñas)</span></div><div class="lcard-tags"><span class="ltag">${l.subcategory||l.category}</span><span class="ltag">${l.experience} años exp</span>${l.languages.includes("Spanish")?'<span class="ltag ltag-es">Habla Español</span>':''} </div><a href="tel:18005295866" class="lcall-btn"><i class="fa-solid fa-phone"></i> Consulta Gratis — Llamar Ahora</a></div>`).join("");
+  document.getElementById("lawyerGrid").innerHTML=l.map(l=>{
+  const rating = l.rating || null;
+  const reviews = l.reviews || 0;
+  const langs = l.languages || [];
+  const exp = l.experience || null;
+  const phoneDigits = l.phone ? l.phone.replace(/[^0-9]/g,"") : "18005295866";
+  return `<div class="lcard"><div class="lcard-top"><img src="${l.image||("https://ui-avatars.com/api/?name="+encodeURIComponent(l.name)+"&background=0b1d35&color=c8922e")}" alt="${l.name}" class="lcard-img"/><div style="flex:1"><div class="lcard-name">${l.name}</div><div class="lcard-firm">${l.firm}</div><div class="lcard-loc"><i class="fa-solid fa-location-dot"></i> ${l.city}, ${l.state}</div></div>${l.free_consultation?'<span class="free-badge">Free Consult</span>':''}</div>${rating?`<div class="lcard-stars"><span class="stars-val">${"★".repeat(Math.floor(rating))}${"☆".repeat(5-Math.floor(rating))}</span><span class="stars-num">${rating}</span><span class="stars-count">(${reviews} reviews)</span></div>`:''}<div class="lcard-tags">${exp?`<span class="ltag">${exp} yrs exp</span>`:''}${langs.includes("Spanish")?'<span class="ltag ltag-es">Habla Español</span>':''}</div><a href="tel:${phoneDigits}" class="lcall-btn"><i class="fa-solid fa-phone"></i> Free Consultation — Call Now</a></div>`;
+}).join("");
 });
 </script>
 </body>

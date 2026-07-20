@@ -52,7 +52,7 @@
 var CITY_NAME = "Dothan";
 fetch("../../../../../data/lawyer.json").then(function(r){return r.json();}).then(function(data){
   var l = data.filter(function(x){return x.category === "Personal Injury" && x.city === CITY_NAME && x.state === "Alabama";});
-  document.getElementById("lawyerGrid").innerHTML = l.length ? "" : "<p style=\"grid-column:1/-1;color:#5a6a7e;font-size:0.9rem;\">Verified attorneys serving " + CITY_NAME + " are being added. Call now and we will connect you with a licensed attorney.</p>";
+  document.getElementById("lawyerGrid").innerHTML = l.length ? l.map(function(x){return '<div class="lcard"><div class="lcard-top"><img src="'+(x.image||"https://ui-avatars.com/api/?name="+encodeURIComponent(x.name)+"&background=0b1d35&color=c8922e")+'" alt="'+x.name+'" class="lcard-img"/><div style="flex:1"><div class="lcard-name">'+x.name+'</div><div class="lcard-firm">'+x.firm+'</div><div class="lcard-loc"><i class="fa-solid fa-location-dot"></i> '+x.city+', '+x.state+'</div></div></div><a href="tel:'+(x.phone?x.phone.replace(/[^0-9]/g,""):"18005295866")+'" class="lcall-btn"><i class="fa-solid fa-phone"></i> Free Consultation - Call Now</a></div>';}).join("") : "<p style=\"grid-column:1/-1;color:#5a6a7e;font-size:0.9rem;\">Verified attorneys serving " + CITY_NAME + " are being added. Call now and we will connect you with a licensed attorney.</p>";
 }).catch(function(){
   document.getElementById("lawyerGrid").innerHTML = "<p style=\"grid-column:1/-1;color:#5a6a7e;font-size:0.9rem;\">Call now and we will connect you with a licensed attorney serving " + CITY_NAME + ".</p>";
 });
