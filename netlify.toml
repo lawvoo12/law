@@ -1,0 +1,17 @@
+[[redirects]]
+  from = "/uk"
+  to = "https://lawvoo-uk.vercel.app/uk"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/uk/*"
+  to = "https://lawvoo-uk.vercel.app/uk/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/uk-static/*"
+  to = "https://lawvoo-uk.vercel.app/uk-static/:splat"
+  status = 200
+  force = true
