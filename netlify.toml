@@ -1,3 +1,11 @@
+# UK visitors opening the homepage go to the UK site
+[[redirects]]
+  from = "/"
+  to = "/uk"
+  status = 302
+  force = true
+  conditions = {Country = ["GB"]}
+
 [[redirects]]
   from = "/uk"
   to = "https://lawvoo-uk.vercel.app/uk"
