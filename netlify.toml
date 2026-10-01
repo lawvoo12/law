@@ -23,3 +23,15 @@
   to = "https://lawvoo-uk.vercel.app/uk-static/:splat"
   status = 200
   force = true
+
+  [[redirects]]
+  from = "/ie"
+  to = "https://lawvoo-uk.vercel.app/ie"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ie/*"
+  to = "https://lawvoo-uk.vercel.app/ie/:splat"
+  status = 200
+  force = true
