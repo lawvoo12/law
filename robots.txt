@@ -3,3 +3,4 @@ Allow: /
 
 Sitemap: https://www.lawvoo.com/sitemap.xml
 Sitemap: https://www.lawvoo.com/uk/sitemap.xml
+Sitemap: https://www.lawvoo.com/ie/sitemap.xml
