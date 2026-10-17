@@ -35,3 +35,17 @@
   to = "https://lawvoo-uk.vercel.app/ie/:splat"
   status = 200
   force = true
+
+# Canada (/ca) — same Vercel app as /uk and /ie; its CSS/JS already come
+# through /uk-static/* above.
+[[redirects]]
+  from = "/ca"
+  to = "https://lawvoo-uk.vercel.app/ca"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ca/*"
+  to = "https://lawvoo-uk.vercel.app/ca/:splat"
+  status = 200
+  force = true
