@@ -62,3 +62,177 @@
   to = "https://lawvoo-uk.vercel.app/us/:splat"
   status = 200
   force = true
+
+# ---------------------------------------------------------------------------
+# Old US personal-injury pages (/en, /es) were removed on 18 Oct 2026.
+# Pages for the five Alabama cities Lawvoo US covers go to the matching
+# personal injury page; other Alabama pages go to the US personal injury
+# page; everything else goes to /us. Permanent (301) redirects.
+# ---------------------------------------------------------------------------
+[[redirects]]
+  from = "/en/personal-injury/:case/alabama/birmingham"
+  to = "/us/lawyers/personal-injury/birmingham-alabama"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/personal-injury/:case/alabama/birmingham/*"
+  to = "/us/lawyers/personal-injury/birmingham-alabama"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/personal-injury/:case/alabama/montgomery"
+  to = "/us/lawyers/personal-injury/montgomery"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/personal-injury/:case/alabama/montgomery/*"
+  to = "/us/lawyers/personal-injury/montgomery"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/personal-injury/:case/alabama/huntsville"
+  to = "/us/lawyers/personal-injury/huntsville"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/personal-injury/:case/alabama/huntsville/*"
+  to = "/us/lawyers/personal-injury/huntsville"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/personal-injury/:case/alabama/mobile"
+  to = "/us/lawyers/personal-injury/mobile"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/personal-injury/:case/alabama/mobile/*"
+  to = "/us/lawyers/personal-injury/mobile"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/personal-injury/:case/alabama/dothan"
+  to = "/us/lawyers/personal-injury/dothan"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/personal-injury/:case/alabama/dothan/*"
+  to = "/us/lawyers/personal-injury/dothan"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/personal-injury/:case/alabama"
+  to = "/us/lawyers/personal-injury"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/personal-injury/:case/alabama/*"
+  to = "/us/lawyers/personal-injury"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en"
+  to = "/us"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/*"
+  to = "/us"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/personal-injury/:case/alabama/birmingham"
+  to = "/us/lawyers/personal-injury/birmingham-alabama"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/personal-injury/:case/alabama/birmingham/*"
+  to = "/us/lawyers/personal-injury/birmingham-alabama"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/personal-injury/:case/alabama/montgomery"
+  to = "/us/lawyers/personal-injury/montgomery"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/personal-injury/:case/alabama/montgomery/*"
+  to = "/us/lawyers/personal-injury/montgomery"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/personal-injury/:case/alabama/huntsville"
+  to = "/us/lawyers/personal-injury/huntsville"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/personal-injury/:case/alabama/huntsville/*"
+  to = "/us/lawyers/personal-injury/huntsville"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/personal-injury/:case/alabama/mobile"
+  to = "/us/lawyers/personal-injury/mobile"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/personal-injury/:case/alabama/mobile/*"
+  to = "/us/lawyers/personal-injury/mobile"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/personal-injury/:case/alabama/dothan"
+  to = "/us/lawyers/personal-injury/dothan"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/personal-injury/:case/alabama/dothan/*"
+  to = "/us/lawyers/personal-injury/dothan"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/personal-injury/:case/alabama"
+  to = "/us/lawyers/personal-injury"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/personal-injury/:case/alabama/*"
+  to = "/us/lawyers/personal-injury"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es"
+  to = "/us"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/es/*"
+  to = "/us"
+  status = 301
+  force = true
