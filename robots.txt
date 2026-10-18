@@ -1,8 +1,10 @@
 User-agent: *
 Allow: /
 Disallow: /ca/api/
+Disallow: /us/api/
 
 Sitemap: https://lawvoo.com/sitemap.xml
 Sitemap: https://lawvoo.com/uk/sitemap.xml
 Sitemap: https://lawvoo.com/ie/sitemap.xml
 Sitemap: https://lawvoo.com/ca/sitemap.xml
+Sitemap: https://lawvoo.com/us/sitemap.xml
