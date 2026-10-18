@@ -49,3 +49,16 @@
   to = "https://lawvoo-uk.vercel.app/ca/:splat"
   status = 200
   force = true
+
+# United States (/us) — same Vercel app as /uk, /ie and /ca.
+[[redirects]]
+  from = "/us"
+  to = "https://lawvoo-uk.vercel.app/us"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/us/*"
+  to = "https://lawvoo-uk.vercel.app/us/:splat"
+  status = 200
+  force = true
