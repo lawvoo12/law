@@ -50,6 +50,73 @@
   status = 200
   force = true
 
+# ---------------------------------------------------------------------------
+# US city URLs changed on 22 Oct 2026 to always include the state
+# ("montgomery" -> "montgomery-al"), so cities with the same name in other
+# states never clash. Old URLs redirect permanently (301). These must stay
+# ABOVE the /us proxy rules below.
+# ---------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/us/locations/birmingham-alabama"
+  to = "/us/locations/birmingham-al"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/us/lawyers/:area/birmingham-alabama"
+  to = "/us/lawyers/:area/birmingham-al"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/us/locations/montgomery"
+  to = "/us/locations/montgomery-al"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/us/lawyers/:area/montgomery"
+  to = "/us/lawyers/:area/montgomery-al"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/us/locations/huntsville"
+  to = "/us/locations/huntsville-al"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/us/lawyers/:area/huntsville"
+  to = "/us/lawyers/:area/huntsville-al"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/us/locations/mobile"
+  to = "/us/locations/mobile-al"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/us/lawyers/:area/mobile"
+  to = "/us/lawyers/:area/mobile-al"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/us/locations/dothan"
+  to = "/us/locations/dothan-al"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/us/lawyers/:area/dothan"
+  to = "/us/lawyers/:area/dothan-al"
+  status = 301
+  force = true
+
 # United States (/us) — same Vercel app as /uk, /ie and /ca.
 [[redirects]]
   from = "/us"
@@ -71,61 +138,61 @@
 # ---------------------------------------------------------------------------
 [[redirects]]
   from = "/en/personal-injury/:case/alabama/birmingham"
-  to = "/us/lawyers/personal-injury/birmingham-alabama"
+  to = "/us/lawyers/personal-injury/birmingham-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/en/personal-injury/:case/alabama/birmingham/*"
-  to = "/us/lawyers/personal-injury/birmingham-alabama"
+  to = "/us/lawyers/personal-injury/birmingham-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/en/personal-injury/:case/alabama/montgomery"
-  to = "/us/lawyers/personal-injury/montgomery"
+  to = "/us/lawyers/personal-injury/montgomery-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/en/personal-injury/:case/alabama/montgomery/*"
-  to = "/us/lawyers/personal-injury/montgomery"
+  to = "/us/lawyers/personal-injury/montgomery-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/en/personal-injury/:case/alabama/huntsville"
-  to = "/us/lawyers/personal-injury/huntsville"
+  to = "/us/lawyers/personal-injury/huntsville-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/en/personal-injury/:case/alabama/huntsville/*"
-  to = "/us/lawyers/personal-injury/huntsville"
+  to = "/us/lawyers/personal-injury/huntsville-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/en/personal-injury/:case/alabama/mobile"
-  to = "/us/lawyers/personal-injury/mobile"
+  to = "/us/lawyers/personal-injury/mobile-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/en/personal-injury/:case/alabama/mobile/*"
-  to = "/us/lawyers/personal-injury/mobile"
+  to = "/us/lawyers/personal-injury/mobile-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/en/personal-injury/:case/alabama/dothan"
-  to = "/us/lawyers/personal-injury/dothan"
+  to = "/us/lawyers/personal-injury/dothan-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/en/personal-injury/:case/alabama/dothan/*"
-  to = "/us/lawyers/personal-injury/dothan"
+  to = "/us/lawyers/personal-injury/dothan-al"
   status = 301
   force = true
 
@@ -155,61 +222,61 @@
 
 [[redirects]]
   from = "/es/personal-injury/:case/alabama/birmingham"
-  to = "/us/lawyers/personal-injury/birmingham-alabama"
+  to = "/us/lawyers/personal-injury/birmingham-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/es/personal-injury/:case/alabama/birmingham/*"
-  to = "/us/lawyers/personal-injury/birmingham-alabama"
+  to = "/us/lawyers/personal-injury/birmingham-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/es/personal-injury/:case/alabama/montgomery"
-  to = "/us/lawyers/personal-injury/montgomery"
+  to = "/us/lawyers/personal-injury/montgomery-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/es/personal-injury/:case/alabama/montgomery/*"
-  to = "/us/lawyers/personal-injury/montgomery"
+  to = "/us/lawyers/personal-injury/montgomery-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/es/personal-injury/:case/alabama/huntsville"
-  to = "/us/lawyers/personal-injury/huntsville"
+  to = "/us/lawyers/personal-injury/huntsville-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/es/personal-injury/:case/alabama/huntsville/*"
-  to = "/us/lawyers/personal-injury/huntsville"
+  to = "/us/lawyers/personal-injury/huntsville-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/es/personal-injury/:case/alabama/mobile"
-  to = "/us/lawyers/personal-injury/mobile"
+  to = "/us/lawyers/personal-injury/mobile-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/es/personal-injury/:case/alabama/mobile/*"
-  to = "/us/lawyers/personal-injury/mobile"
+  to = "/us/lawyers/personal-injury/mobile-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/es/personal-injury/:case/alabama/dothan"
-  to = "/us/lawyers/personal-injury/dothan"
+  to = "/us/lawyers/personal-injury/dothan-al"
   status = 301
   force = true
 
 [[redirects]]
   from = "/es/personal-injury/:case/alabama/dothan/*"
-  to = "/us/lawyers/personal-injury/dothan"
+  to = "/us/lawyers/personal-injury/dothan-al"
   status = 301
   force = true
 
