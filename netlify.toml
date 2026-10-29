@@ -130,6 +130,19 @@
   status = 200
   force = true
 
+# New Zealand (/nz) — same Vercel app as /uk, /ie, /ca and /us.
+[[redirects]]
+  from = "/nz"
+  to = "https://lawvoo-uk.vercel.app/nz"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/nz/*"
+  to = "https://lawvoo-uk.vercel.app/nz/:splat"
+  status = 200
+  force = true
+
 # ---------------------------------------------------------------------------
 # Old US personal-injury pages (/en, /es) were removed on 18 Oct 2026.
 # Pages for the five Alabama cities Lawvoo US covers go to the matching
